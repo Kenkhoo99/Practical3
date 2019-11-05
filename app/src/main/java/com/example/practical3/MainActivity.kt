@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
             R.id.red_button -> box_three_text.setBackgroundResource(R.color.my_red)
             R.id.yellow_button -> box_four_text.setBackgroundResource(R.color.my_yellow)
             R.id.green_button -> box_five_text.setBackgroundResource(R.color.my_green)
+            R.id.pic_box1 -> view.setBackgroundResource(R.drawable.dog)
+            R.id.pic_box2-> view.setBackgroundResource(R.drawable.fox)
+            R.id.pic_box3 -> view.setBackgroundResource(R.drawable.elephant)
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
     }
@@ -46,10 +49,16 @@ class MainActivity : AppCompatActivity() {
         val greenButton = findViewById<TextView>(R.id.green_button)
         val yellowButton = findViewById<TextView>(R.id.yellow_button)
 
+        val dog = findViewById<TextView>(R.id.pic_box1)
+        val fox = findViewById<TextView>(R.id.pic_box2)
+        val elephant = findViewById<TextView>(R.id.pic_box3)
+
+
         val clickableViews: List<View> =
             listOf(boxOneText, boxTwoText, boxThreeText,
                 boxFourText, boxFiveText, rootConstraintLayout,
-                redButton, greenButton, yellowButton
+                redButton, greenButton, yellowButton, dog , fox,
+                elephant
             )
 
         for (item in clickableViews) {
